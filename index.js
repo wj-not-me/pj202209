@@ -2,4 +2,11 @@
 const foo = () => {
     console.log('foo')
 }
-export default foo
+
+const bar = () => {
+    console.log('bar')
+}
+export default {
+    foo,
+    bar
+}
