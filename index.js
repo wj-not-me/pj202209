@@ -9,8 +9,11 @@ const bar = () => {
 
 const demo = 'demo'
 
+const temp = 'temp'
+
 export default {
     foo,
     bar,
-    demo
+    demo,
+    temp
 }
