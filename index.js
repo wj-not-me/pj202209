@@ -11,9 +11,12 @@ const demo = 'demo'
 
 const test = 'test'
 
+const temp = 'temp'
+
 export default {
     foo,
     bar,
     demo,
-    test
+    test,
+    temp
 }
