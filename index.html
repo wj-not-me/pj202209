@@ -4,14 +4,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .btn-group span {
+            /* width: 100px; */
+            /* height: 45px; */
+            margin-left: 20px;
+            border: 1px solid salmon;
+            line-height: 45px;
+            cursor: pointer;
+        }
+        .content {
+            /* position: relative; */
+            width: 400px;
+            height: 300px;
+            margin-top: 50px;
+            border: 1px solid greenyellow;
+            /* overflow: hidden; */
+        }
+        .box {
+            /* position: absolute; */
+            /* left: 0; */
+            width: 800px;
+        }
+        .box ul {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .container1 {
+            width: 400px;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+        .container2 {
+            width: 400px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
     <section>
-        <h1>Project 202209</h1>
-        <h2>Project 202210</h2>
-        <h3>Project 202211</h3>
-        <h4>Project 202212</h4>
-        <h5>Project 202213<h5>
+        <div class="btn-group">
+            <span onclick="swipe(0)">展示1</span>
+            <span onclick="swipe(1)">展示2</span>
+        </div>
+        <div class="content">
+            <div class="box" id="box-swiper">
+                <ul>
+                    <li>
+                        <div class="container1"></div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="container2"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+        <div id="animate-test">animate-test</div>
     </section>
+    <script>
+        var swipe = function (index) {
+            const start = (index ? 1 : 0) * 400 | 0
+            const end = index * 400 | 0
+            document.getElementById("animate-test").animate({ left: '100px' }, 1000)
+        }
+    </script>
 </body>
 </html>
